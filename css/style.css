@@ -1,0 +1,93 @@
+/* Start Variables */
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --bg-heading-clr: hsl(0, 0%, 95%);
+    --paragraphs-clr: hsla(0, 0%, 100%, 0.75);
+}
+/* End Variables */
+
+* {
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-heading-clr);
+    font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 60%;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 375px) {
+    main {
+        width: 80%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 370px);
+    }
+}
+main .box {
+    padding: 0 40px;
+    position: relative;
+}
+main .sedans {
+    background-color: var(--bright-orange);
+    color: var(--bright-orange);
+}
+main .suvs {
+    background-color: var(--dark-cyan);
+    color: var(--dark-cyan);
+}
+main .luxury {
+    background-color: var(--very-dark-cyan);
+    color: var(--very-dark-cyan);
+}
+
+main .box img {
+    width: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+main .box h1 {
+    margin: 0 0 20px;
+    color: var(--bg-heading-clr);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+}
+main .box p {
+    color: var(--paragraphs-clr);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.6;
+}
+main .box .btn {
+    background-color: var(--bg-heading-clr);
+    color: inherit;
+    font-family: 'Lexend Deca', sans-serif;
+    border: none;
+    border-radius: 30px;
+    padding: .8rem 2rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    transition: 0.3s;
+}
+main .box .btn:focus,
+main .box .btn:hover {
+    outline: none;
+    border: 2px solid var(--bg-heading-clr);
+    background-color: transparent;
+    color: var(--bg-heading-clr);
+}
